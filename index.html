@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holedo Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Holedo Integration - White Label Demo Page</h1>
+<div class="row">
+    <div id="hl-container"></div>
+</div>
+<script>
+    HLSettings = {
+        "criteria": {
+            "organization": "55",
+            "clients": "all",
+            "brands": "all",
+            "location": ["all"],
+            "sort_by": "title",
+            "sort_order": "desc"
+        }
+    };
+    (function(w, d, s) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        js = d.createElement(s);
+        js.src = "//api.holedo.com/embed";
+        js.async = 1;
+        fjs.parentNode.insertBefore(js, fjs);
+    })(window, document, "script");
+</script>
+</body>
+</html>
